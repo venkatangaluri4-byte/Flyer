@@ -1,280 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Streetwear Drop</title>
-
-  <style>
-    :root{
-      --bg:#0f0f10;
-      --card:#17171a;
-      --text:#fff;
-      --muted:#9ca3af;
-      --accent:#ff4d4d;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial,sans-serif;
-    }
-
-    body{
-      background:var(--bg);
-      color:var(--text);
-      padding:16px;
-    }
-
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:20px;
-    }
-
-    .logo{
-      font-size:22px;
-      font-weight:800;
-    }
-
-    .menu{
-      position:relative;
-    }
-
-    .menu-btn{
-      background:var(--card);
-      border:none;
-      color:white;
-      padding:10px 14px;
-      border-radius:10px;
-      cursor:pointer;
-    }
-
-    .dropdown{
-      display:none;
-      position:absolute;
-      right:0;
-      top:48px;
-      background:var(--card);
-      border-radius:12px;
-      overflow:hidden;
-      min-width:180px;
-      z-index:10;
-    }
-
-    .dropdown a{
-      display:block;
-      padding:12px;
-      color:white;
-      text-decoration:none;
-      border-bottom:1px solid rgba(255,255,255,0.05);
-    }
-
-    .dropdown a:hover{
-      background:#222;
-    }
-
-    .hero{
-      position:relative;
-      overflow:hidden;
-      border-radius:20px;
-      background:#1a1a1d;
-      margin-bottom:20px;
-    }
-
-    .hero-img{
-      height:280px;
-      background:url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop') center/cover;
-      filter:brightness(0.6);
-    }
-
-    .hero-text{
-      position:absolute;
-      bottom:20px;
-      left:20px;
-      right:20px;
-    }
-
-    .badge{
-      display:inline-block;
-      background:var(--accent);
-      padding:6px 12px;
-      border-radius:20px;
-      font-size:12px;
-      font-weight:700;
-      margin-bottom:10px;
-    }
-
-    h1{
-      font-size:32px;
-      margin-bottom:10px;
-    }
-
-    p{
-      color:#ddd;
-      line-height:1.5;
-    }
-
-    .cta-row{
-      display:flex;
-      gap:10px;
-      margin-top:16px;
-    }
-
-    .btn{
-      flex:1;
-      padding:14px;
-      border:none;
-      border-radius:14px;
-      cursor:pointer;
-      font-weight:700;
-    }
-
-    .btn-primary{
-      background:var(--accent);
-      color:white;
-    }
-
-    .btn-outline{
-      background:transparent;
-      border:1px solid #555;
-      color:white;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-      margin-top:12px;
-    }
-
-    .card{
-      background:var(--card);
-      border-radius:18px;
-      overflow:hidden;
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-4px);
-    }
-
-    .card img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-    }
-
-    .name{
-      font-weight:700;
-      padding:10px 12px 4px;
-    }
-
-    .price{
-      color:var(--muted);
-      padding:0 12px 14px;
-      font-size:14px;
-    }
-
-    footer{
-      text-align:center;
-      color:var(--muted);
-      margin-top:30px;
-      font-size:14px;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">STREETWEAR</div>
-
-  <div class="menu">
-    <button class="menu-btn" id="menuBtn">Categories ▾</button>
-
-    <div class="dropdown" id="dropdown">
-      <a href="#category-shoes">Shoes</a>
-      <a href="#category-hoodies">Hoodies</a>
-      <a href="#category-hats">Hats</a>
-      <a href="#category-accessories">Accessories</a>
-    </div>
-  </div>
-</header>
-
-<main>
-
 <section class="hero">
-  <div class="hero-img"></div>
 
-  <div class="hero-text">
-    <div class="badge">Limited Drop</div>
+  <div class="hero-overlay"></div>
 
-    <h1>Bold looks. Comfortable fits.</h1>
+  <img 
+    class="hero-product"
+    src="YOUR_MAIN_PRODUCT_IMAGE.png"
+    alt="Streetwear Product"
+  />
+
+  <div class="hero-content">
+
+    <div class="summer-badge">
+      ☀️ SUMMER DROP 2026
+    </div>
+
+    <h1>
+      STREETWEAR<br>
+      SUMMER VIBES
+    </h1>
 
     <p>
-      Curated streetwear picks — exclusive styles for this week.
+      Oversize tees, premium fits and fresh summer styles 🔥
     </p>
 
-    <div class="cta-row">
-      <button class="btn btn-primary">Shop Now</button>
-      <button class="btn btn-outline">Share</button>
+    <div class="hero-buttons">
+      <button class="primary-btn">
+        Shop Now
+      </button>
+
+      <button class="secondary-btn">
+        View Catalog
+      </button>
     </div>
+
   </div>
 </section>
 
-<section>
+<style>
 
-<div class="grid">
+.hero{
+  position:relative;
+  height:92vh;
+  overflow:hidden;
+  border-radius:32px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.15),
+      rgba(0,0,0,0.65)
+    ),
+    linear-gradient(
+      135deg,
+      #f8e7c9,
+      #f6d3b8,
+      #d6b89c
+    );
 
-<div class="card" id="category-shoes">
-<img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?q=80&w=800&auto=format&fit=crop">
-<div class="name">Shoes</div>
-<div class="price">From $79</div>
-</div>
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-<div class="card" id="category-hoodies">
-<img src="https://images.unsplash.com/photo-1602810310328-6a8a0f6a7f4f?q=80&w=800&auto=format&fit=crop">
-<div class="name">Hoodies</div>
-<div class="price">From $49</div>
-</div>
+.hero-overlay{
+  position:absolute;
+  inset:0;
 
-<div class="card" id="category-hats">
-<img src="https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?q=80&w=800&auto=format&fit=crop">
-<div class="name">Hats</div>
-<div class="price">From $19</div>
-</div>
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255,255,255,0.18),
+      transparent 30%
+    );
 
-<div class="card" id="category-accessories">
-<img src="https://images.unsplash.com/photo-1591012911201-0c9e4f26b4a5?q=80&w=800&auto=format&fit=crop">
-<div class="name">Accessories</div>
-<div class="price">From $9</div>
-</div>
+  backdrop-filter:blur(2px);
+}
 
-</div>
+.hero-product{
+  position:absolute;
 
-</section>
+  width:95%;
+  max-width:520px;
 
-</main>
+  object-fit:contain;
 
-<footer>
-  Share this page with friends on WhatsApp 🔥
-</footer>
+  bottom:-10px;
 
-<script>
-const menuBtn = document.getElementById('menuBtn');
-const dropdown = document.getElementById('dropdown');
+  z-index:2;
 
-menuBtn.addEventListener('click', () => {
-  dropdown.style.display =
-    dropdown.style.display === 'block'
-      ? 'none'
-      : 'block';
-});
-</script>
+  filter:
+    drop-shadow(0 30px 60px rgba(0,0,0,0.45));
 
-</body>
-</html>
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+}
+
+.hero-content{
+  position:absolute;
+
+  top:50px;
+  left:28px;
+  right:28px;
+
+  z-index:3;
+
+  color:white;
+}
+
+.summer-badge{
+  display:inline-flex;
+
+  align-items:center;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.16);
+
+  backdrop-filter:blur(14px);
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:52px;
+
+  line-height:0.95;
+
+  font-weight:900;
+
+  letter-spacing:-2px;
+
+  margin-bottom:18px;
+
+  text-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+}
+
+.hero p{
+  max-width:320px;
+
+  font-size:17px;
+
+  line-height:1.5;
+
+  color:
+    rgba(255,255,255,0.88);
+
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+
+  gap:14px;
+
+  flex-wrap:wrap;
+}
+
+.primary-btn{
+  border:none;
+
+  padding:16px 28px;
+
+  border-radius:18px;
+
+  background:#ffffff;
+
+  color:#111;
+
+  font-weight:800;
+
+  font-size:15px;
+
+  box-shadow:
+    0 15px 40px rgba(255,255,255,0.2);
+}
+
+.secondary-btn{
+  border:none;
+
+  padding:16px 28px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,0.14);
+
+  backdrop-filter:blur(12px);
+
+  color:white;
+
+  font-weight:700;
+
+  font-size:15px;
+
+  border:
+    1px solid rgba(255,255,255,0.18);
+}
+
+</style>
